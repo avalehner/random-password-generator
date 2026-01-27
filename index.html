@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 class="top">Generate a</h1>
+        <h1 class="bottom">random password</h1>
+        <p class="description">Never use an insecure password again.</p>
+        <input id="password-length"></input> 
+        <button onclick="setPasswordLength()">Set password length</button>
+        <div class="toggle">
+            <label class="toggle-switch">
+                <input class="checkbox" type="checkbox" onclick="symbols()"/>
+                <span class="slider"></span>
+            </label>
+             <span>No symbols</span>
+        </div>
+        <div class="toggle">
+            <label class="toggle-switch">
+                <input class="checkbox" type="checkbox" onclick="numbers()"/>
+                <span class="slider"></span>
+            </label>
+            <span>No numbers</span>
+        </div>
+        <div>
+            <button class="generate" onclick="generatePassword()">Generate passwords</button>
+            <button id="reset">Reset</button>
+        </div>
+        <hr>
+        <div class="passwords">
+            <p class="password" id="password-one"></p>
+            <p class="password" id="password-two"></p>
+            <button class="one" onclick="copyPasswordOne()">Copy password one</button>
+            <button class="two" onclick="copyPasswordTwo()">Copy password two</button>
+       </div>
+        <script src="index.js"></script>
+    </body>
+</html>
